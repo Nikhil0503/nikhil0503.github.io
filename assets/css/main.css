@@ -2706,16 +2706,25 @@ input, select, textarea {
 		.spotlight:nth-child(5) {
 			background-color: rgba(0, 40, 0, 150);
 			display:flex;
-			justify-content: center;
 		}
 
 		.spotlight:nth-child(5) h2{
 			font-size: 35px;
+			text-align: center;
+		}
+
+		.spotlight:nth-child(5) p{
+			text-align: center;
+			font-weight: 500;
 		}
 
 		.spotlight:nth-child(5) .languages{
 			display:flex;
-			justify-content: space-between;
+			justify-content: center;
+		}
+
+		.spotlight:nth-child(5) .languages a{
+			margin: 35px;
 		}
 
 		/*
@@ -3094,8 +3103,12 @@ input, select, textarea {
    				transition: opacity 2s ease;
 			}
 
-			.wrapper.style3 .content h1, h4, p{
+			.wrapper.style3 .content h1, h4{
 				text-transform: capitalize;
+			}
+
+			.wrapper.style3 .content h1, h4, p{
+				overflow: auto;
 			}
 
 			.wrapper.style3 .content.buttons{
