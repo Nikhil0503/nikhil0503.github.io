@@ -2852,6 +2852,25 @@ input, select, textarea {
 				color: #ffffff;
 			}
 
+			.wrapper.style1 .summary{
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.wrapper.style1 .summary .nested{
+				font-style:italic;
+				font-size: 17px;
+			}
+
+			.wrapper.style1 .summary .hBI{
+				width: fit-content;
+			}
+
+			.wrapper.style1 .summary .other{
+				width: 500px;
+				height: 500px;
+			}
+
 			.wrapper.style1 hr {
 				border-color: rgba(0, 0, 0, 0.125);
 			}
@@ -3081,7 +3100,7 @@ input, select, textarea {
 				height: 100%;
 				object-fit: cover;
 				transition: transform 0.3s ease;
-				filter: brightness(85%);
+				filter: brightness(80%);
 			}
 
 			.wrapper.style3 .project-card:hover .card-img {
@@ -3297,6 +3316,32 @@ input, select, textarea {
 
 			.wrapper.style5 label {
 				color: #2E3842;
+			}
+
+			/*Bootstrap slideshow sliding*/
+			.wrapper.style5 .carousel-item{
+				height: 35rem;
+				font-family:fantasy;
+				position: relative;
+			}
+
+			.wrapper.style5 .container{
+				position:absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding-bottom: 50px;
+			}
+
+			.wrapper.style5 .overlay-image{
+				position:absolute;
+				bottom:0;
+				left:0;
+				right:0;
+				top:0;
+				background-position: center;
+				background-size: cover;
+				opacity: 0.7;
 			}
 
 			.wrapper.style5 input[type="text"],
@@ -4010,7 +4055,7 @@ input, select, textarea {
 	}
 
 		#footer .icons {
-			font-size: 1.25em;
+			font-size: 1.75em;
 		}
 
 			#footer .icons a {
