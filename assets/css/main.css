@@ -3278,7 +3278,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style5 {
-			background-color: #ffffff;
+			background-color: hsl(84, 40%, 49%);
 			color: #4E4852;
 		}
 
@@ -3316,6 +3316,52 @@ input, select, textarea {
 
 			.wrapper.style5 label {
 				color: #2E3842;
+			}
+
+			/*Contact Form*/
+			.wrapper.style5 .contact-form{
+				aspect-ratio: 1/.7;
+				max-width: 600px;
+				background-color: #fff;
+				top: 50%;
+				left: 50%;
+				margin-left: 20px;
+				padding: 30px 40px;
+				box-sizing: border-box;
+				border-radius: 8px;
+				text-align: center;
+				box-shadow: 0 0 35px #000000b3;
+				font-family:"Montserrat", sans-serif;
+			}
+
+			.wrapper.style5 .contact-form .textbox{
+				border: 1px solid gray;
+				margin: 18px 0;
+				padding: 12px 18px;
+				border-radius: 12px;
+			}
+
+			.wrapper.style5 .contact-form .textbox label{
+				display: block;
+				text-align: left;
+				color: #333;
+				font-size: 14px;
+			}
+
+			.wrapper.style5 .contact-form .textbox input,.wrapper.style5 .contact-form .textbox textarea {
+				width: 100%;
+				font-size: 18px;
+				margin-top: 6px;
+			}	
+
+			.wrapper.style5 .contact-form a{
+				display: inline-block;
+				background: green;
+				padding: 14px 0;
+				color: white;
+				cursor: pointer;
+				margin-top: 8px;
+				width: 100%;
 			}
 
 			/*Bootstrap slideshow sliding*/
