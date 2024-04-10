@@ -1,18 +1,13 @@
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Contact Nikhil</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="../../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../../assets/css/noscript.css"/></noscript>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body class="is-preload" style="font-family: 'Times New Roman', Times, serif;">
 
@@ -28,10 +23,10 @@
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="hobbiesAndInterests.html">Hobbies and Interests</a></li>
-											<li><a href="contactme.html">Contact Me Page</a></li>
-											<li><a target = "_blank" href="Nikhil Munagala- 2023 Latest Resume (20).pdf">Resume</a></li>
+											<li><a href="../../../index.html">Home</a></li>
+											<li><a href="../../../hobbiesAndInterests.html">Hobbies and Interests</a></li>
+											<li><a href="../../../contactme.html">Contact Me Page</a></li>
+											<li><a target = "_blank" href="../assets/Nikhil Munagala- 2023 Latest Resume (20).pdf">Resume</a></li>
 										</ul>
 									</div>
 								</li>
@@ -50,26 +45,70 @@
 								<div class = "contact-form">
 									<div class = "textbox">
 										<label for="">Name</label>
-										<input type="text" placeholder="Enter your name">
+										<input type="text" placeholder="Enter your name" class = "name">
 									</div>
 									<div class = "textbox">
 										<label for="">Email Address</label>
-										<input type="text" placeholder="Enter your email address">
+										<input type="text" placeholder="Enter your email address" class = "email-address">
+									</div>
+									<div class = "textbox">
+										<label for="">Subject</label>
+										<input type="text" placeholder="Enter the subject" class = "subject">
 									</div>
 									<div class = "textbox">
 										<label for="">Message</label>
-										<textarea></textarea>
+										<textarea class = "yo"></textarea>
 									</div>
-									<a class = "btn btn-primary">Submit</a>
+									<div class = "buttons">
+										<a class = "btn btn-primary submit">Submit</a>
+									</div>
 								</div>
+								<!---Other contact information-->
 								<div class = "other-contact-info">
-									
+									<div class = "actual-info">
+										<div>Feel free to contact me using my contacts below!</div> 
+											<ul>
+												<li>
+													<span>
+														<b>Discord Username:</b> nikhil6765
+													</span>
+												</li>
+												<li>
+													<span class = "bereal">
+														<b>BeReal Username:</b> nikhlyo
+													</span>
+												</li>
+												<li>
+													<span>
+														<b>Phone Number:</b> 732-754-9338
+													</span>
+												</li>
+											</ul>
+									</div>
+									<!---Discords-->
+									<div class = "discords">
+										Discord communities I am active in, so that you can meet there as well!
+										<!--How to represent the discord communities!-->
+										<i>Here are the invite links to the discords if you are already not in these discords.</i>
+											<br>
+											<br>
+											<!---Section of hyperlinks embedded images-->
+											<div class = "discord-imgs">
+												<div class = "half">
+													<a href="https://discord.gg/TQ37fsB7" target = "_blank"><img src="https://cdn.discordapp.com/icons/409134033898045470/a_db98b0e2d30954bb93c28567ea8ada0d.webp?size=240" alt="RUCS discord"></a>
+													<a href="https://discord.gg/rutgersmath" target = "_blank"><img src="https://cdn.discordapp.com/icons/682667655043350528/a_c477693094ebde5d22b76cf9af2e4420.webp?size=240" alt="RUMath discord"></a>
+											    </div>
+												<div class = "half">
+													<a href="https://discord.gg/rutgersmath" target = "_blank"><img src="https://cdn.discordapp.com/icons/431323924366622761/331188dc4a723c5b0453faae7049e279.webp?size=240" alt="USACS discord"></a>
+													<a href="https://discord.gg/rutgersmath" target = "_blank" class = "dumbaCS"><img src="https://cdn.discordapp.com/icons/883094886587449444/312392d07cd3562c35d564812d8ea0e3.webp?size=240" alt="dumbaCS discord"></a>
+												</div>
+											</div>
+									</div>
 								</div>
 							</div>
 						</section>
 					</article>
 
-					
 					<!-- Footer -->
 					<footer id="footer">
 						<ul class="icons">
@@ -84,14 +123,16 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../../../assets/js/jquery.min.js"></script>
+			<script src="../../../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../../../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../../../assets/js/browser.min.js"></script>
+			<script src="../../../assets/js/breakpoints.min.js"></script>
+			<script src="../../../assets/js/util.js"></script>
+			<script src="../../../assets/js/main.js"></script>
+			<script src="https://smtpjs.com/v3/smtp.js"></script>
 			<!---Bootstrap-->
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+			<script src = "sendEmail.js"></script>
 	</body>
 </html>
