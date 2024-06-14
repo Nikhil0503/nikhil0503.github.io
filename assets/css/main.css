@@ -2660,106 +2660,46 @@ input, select, textarea {
 
 		.spotlight {
 			display: flex;
-			align-items: stretch;
+			flex-wrap: wrap;
+			justify-content: center;
+			background-image: -moz-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+			background-image: -webkit-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+			background-image: -ms-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+			background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		}
 		
-		.spotlight .image {
-			flex: 1;
+		.spotlight img {
 			border-radius: 0;
-		}
-		
-		.spotlight .image img {
-			border-radius: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+			width: 400px;
+			height: 303px;
+			object-fit:cover;
+			padding: 10px;
 		}
 
-		.spotlight:nth-child(2n) {
-			-moz-flex-direction: row-reverse;
-			-webkit-flex-direction: row-reverse;
-			-ms-flex-direction: row-reverse;
-			flex-direction: row-reverse;
+		/*Hovering over the image -> Reduces it's opacity!*/
+		.spotlight img:hover{
+			cursor: pointer;
+			opacity: 50%;
+			transition: 1.2s;
 		}
 
-		.spotlight:nth-child(1) {
-			background-color: rgba(0, 0, 0, 0.075);
-		}
-
-		.spotlight:nth-child(2) {
-			background-color: rgba(0, 0, 0, 0.15);
-		}
-
-		.spotlight:nth-child(3) {
-			background-color: rgba(0, 0, 0, 0.225);
-		}
-
-		.spotlight:nth-child(4) {
-			background-color: rgba(0, 0, 0, 0.3);
-		}
-
-		.spotlight:nth-child(5) {
-			background-color: rgba(0, 40, 0, 150);
-			display:flex;
-		}
-
-		.spotlight:nth-child(5) h2{
-			font-size: 35px;
-			text-align: center;
-		}
-
-		.spotlight:nth-child(5) p{
-			text-align: center;
-			font-weight: 500;
-		}
-
-		.spotlight:nth-child(5) .languages{
-			display:flex;
+		.languages{
+			display: flex;
 			justify-content: center;
 		}
 
-		.spotlight:nth-child(5) .languages a{
-			margin: 35px;
+		.techie{
+			font-size: 30px;
 		}
 
-		/*
-		8/25/2023
-		Work on the media query later, just take your time with things, otherwise gonna make it worse.
-		
-		@media (max-width: 400px){
-			.spotlight:nth-child(5) .languages a{
-				font-size: 15px;
-			}
-		}
-		*/
-
-		.spotlight:nth-child(5) a{
-			font-size: 95px;
+		.note{
+			margin-top: 0.2%;
+			font-size: 20px;
 		}
 
-		.spotlight:nth-child(5) img{
-			height:auto;
-			width: auto;
-		}
-
-		.spotlight:nth-child(6) {
-			background-color: rgba(0, 0, 0, 0.45);
-		}
-
-		.spotlight:nth-child(7) {
-			background-color: rgba(0, 0, 0, 0.525);
-		}
-
-		.spotlight:nth-child(8) {
-			background-color: rgba(0, 0, 0, 0.6);
-		}
-
-		.spotlight:nth-child(9) {
-			background-color: rgba(0, 0, 0, 0.675);
-		}
-
-		.spotlight:nth-child(10) {
-			background-color: rgba(0, 0, 0, 0.75);
+		.languages i{
+			font-size:70px;
+			padding: 50px;
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -2837,6 +2777,7 @@ input, select, textarea {
 		.wrapper.style1 {
 			background-color: #21b2a6;
 			color: #c8ece9;
+			max-height: 925px;
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -2847,6 +2788,16 @@ input, select, textarea {
 				color: #ffffff;
 			}
 
+			.wrapper.style1 .image{
+				margin-top: -5%;
+				margin-bottom: 2%;
+			}
+			.wrapper.style1 .introd{
+				font-family: 'Times New Roman', Times, serif;
+				font-weight: bold;
+				color:hsl(25, 71%, 7%);
+			}
+
 			.wrapper.style1 .summary{
 				display: flex;
 				justify-content: space-between;
@@ -2855,10 +2806,35 @@ input, select, textarea {
 			.wrapper.style1 .summary .nested{
 				font-style:italic;
 				font-size: 17px;
+				margin-left: 18px;
 			}
 
 			.wrapper.style1 .summary .hBI{
 				width: fit-content;
+			}
+
+			.wrapper.style1 .summary .hBI ul{
+				padding-left: 50px;
+			}
+
+			.wrapper.style1 .summary .hBI .badminton{
+				padding-right:95px;
+			}
+			.wrapper.style1 .summary .hBI .tv{
+				padding-right:22px;
+			}
+
+			.wrapper.style1 .summary .hBI .nested{
+				padding-left: 25px;
+			}
+
+			.wrapper.style1 .summary .hBI .nested li{
+				padding-right: 35px;
+			}
+
+			.wrapper.style1 .summary .hBI li{
+				margin: 0;
+        		padding: 0;
 			}
 
 			.wrapper.style1 .summary .other{
@@ -3085,6 +3061,8 @@ input, select, textarea {
 			.wrapper.style3 .card{
 				flex: 1 0 30%;
 				margin: 35px;
+				width: 420px;
+				height: 380px;
 				box-shadow: 5px 5px 20px black;
 				overflow: hidden;
 				position: relative;
@@ -3312,19 +3290,19 @@ input, select, textarea {
 			.wrapper.style5 label {
 				color: #2E3842;
 			}
-
-
-			/*Contact Form*/
+			
 			.wrapper.style5 .contact-stuff{
 				display: flex;
 				flex-direction: row;
 				justify-content: space-evenly;
 				align-items: center;
 			}
-			
+
+			/*Contact Form*/
 			.wrapper.style5 .contact-form{
 				aspect-ratio: 1/1;
 				width: 1000px;
+				height: fit-content;
 				background-color: #fff;
 				top: 50%;
 				left: 50%;
@@ -3378,64 +3356,34 @@ input, select, textarea {
 
 			/*Style for other contact information available.*/
 			.wrapper.style5 .other-contact-info{
-				display: flex;
-				flex-direction: column;
-				justify-content: space-evenly;
-			}
-		  
-			.wrapper.style5 .actual-info{
 				height: fit-content;	
 				width: fit-content;
 				background-color: #fff;
 				padding: 30px 40px;
-				margin-left: 5%;
-				box-sizing: border-box;
+				margin-left: 2%;
+				margin-right:0.5%;
 				border-radius: 8px;
-				text-align: center;
 				box-shadow: 0 0 20px #000000b3;
-				font-family:"Montserrat", sans-serif;
-			}
-
-			.wrapper.style5 .actual-info span{
-				position: relative;
-        		left: -45px;
-			}
-
-			.wrapper.style5 .actual-info span.bereal{
-        		left: -61px;
-			}
-
-			.wrapper.style5 .discords{
-				height: fit-content;	
-				width: fit-content;
-				background-color: #fff;
-				margin-left: 5%;
-				padding: 30px 40px;
-				box-sizing: border-box;
-				border-radius: 8px;
-				text-align: center;
-				box-shadow: 0 0 20px #000000b3;
-				font-family:"Montserrat", sans-serif;
 			}
 
 			/* Set of discord imgs */
-			.wrapper.style5 .discords .discord-imgs{
+			.wrapper.style5 .discord-imgs{
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
 			}
 
-			.wrapper.style5 .discords .discord-imgs img{
+			.wrapper.style5 .discord-imgs img{
 				height: 100px;
 				margin: 10px;
 			}
 
-			.wrapper.style5 .discords .discord-imgs .dumbaCS{
+			.wrapper.style5 .discord-imgs .dumbaCS{
 				filter: brightness(80%);
 			}
 
 			/*Figure out how to remove the links for the images.*/
-			.wrapper.style5 .discords .discord-imgs a{
+			.wrapper.style5 .discord-imgs a{
 				text-decoration: blink;
 			}
 
@@ -3911,8 +3859,9 @@ input, select, textarea {
 			}
 
 		#banner p {
+			margin-top: 15px;
 			letter-spacing: 0.225em;
-			text-transform: uppercase;
+			font-size: 19px;
 		}
 
 			#banner p a {

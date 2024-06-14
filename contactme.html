@@ -8,6 +8,18 @@
 		<noscript><link rel="stylesheet" href="../../../assets/css/noscript.css"/></noscript>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!--EmailJS-->
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+		<script src="information.js"></script>
+		<script type="text/javascript">
+		(function(){
+			emailjs.init({
+				publicKey: window.env.PUBLIC_KEY,
+			});
+		})();
+		</script>
 	</head>
 	<body class="is-preload" style="font-family: 'Times New Roman', Times, serif;">
 
@@ -26,7 +38,7 @@
 											<li><a href="../../../index.html">Home</a></li>
 											<li><a href="../../../hobbiesAndInterests.html">Hobbies and Interests</a></li>
 											<li><a href="../../../contactme.html">Contact Me Page</a></li>
-											<li><a target = "_blank" href="../assets/Nikhil Munagala- 2023 Latest Resume (20).pdf">Resume</a></li>
+											<li><a target = "" href="Nikhil Munagala- 2024 Latest Resume (9).pdf">Resume</a></li>
 										</ul>
 									</div>
 								</li>
@@ -65,7 +77,6 @@
 								</div>
 								<!---Other contact information-->
 								<div class = "other-contact-info">
-									<div class = "actual-info">
 										<div>Feel free to contact me using my contacts below!</div> 
 											<ul>
 												<li>
@@ -84,9 +95,6 @@
 													</span>
 												</li>
 											</ul>
-									</div>
-									<!---Discords-->
-									<div class = "discords">
 										Discord communities I am active in, so that you can meet there as well!
 										<!--How to represent the discord communities!-->
 										<i>Here are the invite links to the discords if you are already not in these discords.</i>
@@ -95,15 +103,10 @@
 											<!---Section of hyperlinks embedded images-->
 											<div class = "discord-imgs">
 												<div class = "half">
-													<a href="https://discord.gg/TQ37fsB7" target = "_blank"><img src="https://cdn.discordapp.com/icons/409134033898045470/a_db98b0e2d30954bb93c28567ea8ada0d.webp?size=240" alt="RUCS discord"></a>
-													<a href="https://discord.gg/rutgersmath" target = "_blank"><img src="https://cdn.discordapp.com/icons/682667655043350528/a_c477693094ebde5d22b76cf9af2e4420.webp?size=240" alt="RUMath discord"></a>
-											    </div>
-												<div class = "half">
-													<a href="https://discord.gg/rutgersmath" target = "_blank"><img src="https://cdn.discordapp.com/icons/431323924366622761/331188dc4a723c5b0453faae7049e279.webp?size=240" alt="USACS discord"></a>
-													<a href="https://discord.gg/rutgersmath" target = "_blank" class = "dumbaCS"><img src="https://cdn.discordapp.com/icons/883094886587449444/312392d07cd3562c35d564812d8ea0e3.webp?size=240" alt="dumbaCS discord"></a>
+													<a href="https://discord.gg/rutgersmath" target = "_blank"><img src="https://cdn.discordapp.com/icons/682667655043350528/a_3259629409858a40755ef9a7b302c72f.webp?size=240" alt="RUMath discord"></a>
+													<a href="https://discord.gg/XJ7jGQ7R" target = "_blank" class = "dumbaCS"><img src="https://cdn.discordapp.com/icons/883094886587449444/312392d07cd3562c35d564812d8ea0e3.webp?size=240" alt="dumbaCS discord"></a>
 												</div>
 											</div>
-									</div>
 								</div>
 							</div>
 						</section>
@@ -114,9 +117,6 @@
 						<ul class="icons">
 							<li><a target="_blank" href="https://github.com/Nikhil0503" class="icon brands fa-github"></a></li>
 							<li><a target="_blank" href="https://www.linkedin.com/in/nikhilsai-munagala-0251611b9/" class="icon brands fa-linkedin"></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 
@@ -130,9 +130,8 @@
 			<script src="../../../assets/js/breakpoints.min.js"></script>
 			<script src="../../../assets/js/util.js"></script>
 			<script src="../../../assets/js/main.js"></script>
-			<script src="https://smtpjs.com/v3/smtp.js"></script>
+			<script src = "sendEmail.js"></script>
 			<!---Bootstrap-->
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-			<script src = "sendEmail.js"></script>
 	</body>
 </html>

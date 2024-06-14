@@ -1,6 +1,18 @@
 {
   "dependencies": {
     "cloudmailin": "^0.0.3",
-    "nodemailer": "^6.9.4"
-  }
+    "jsdom": "^24.1.0",
+    "nodemailer": "^6.9.4",
+    "prompt-sync": "^4.2.0"
+  },
+  "name": "nikhil68596.github.io",
+  "description": "A website about myself showcasing my passion about CS and my skills + work experience + projects.",
+  "version": "1.0.0",
+  "main": "capitalize.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
