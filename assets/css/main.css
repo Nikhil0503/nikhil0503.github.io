@@ -2660,12 +2660,13 @@ input, select, textarea {
 
 		.spotlight {
 			display: flex;
-			flex-wrap: wrap;
+			flex-wrap: wrap; /*Put the images in multiple rows.*/
 			justify-content: center;
 			background-image: -moz-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 			background-image: -webkit-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 			background-image: -ms-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 			background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+			height: 657px;
 		}
 		
 		.spotlight img {
@@ -2676,7 +2677,7 @@ input, select, textarea {
 			padding: 10px;
 		}
 
-		/*Hovering over the image -> Reduces it's opacity!*/
+		/* Hovering over the image increase it's opacity! */
 		.spotlight img:hover{
 			cursor: pointer;
 			opacity: 50%;
@@ -2690,6 +2691,13 @@ input, select, textarea {
 
 		.techie{
 			font-size: 30px;
+		}
+
+		.techsect{
+			background-image: -moz-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+			background-image: -webkit-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+			background-image: -ms-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+			background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		}
 
 		.note{
@@ -2777,7 +2785,7 @@ input, select, textarea {
 		.wrapper.style1 {
 			background-color: #21b2a6;
 			color: #c8ece9;
-			max-height: 925px;
+			max-height: 1460px;
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -2800,6 +2808,7 @@ input, select, textarea {
 
 			.wrapper.style1 .summary{
 				display: flex;
+				flex-direction: column;
 				justify-content: space-between;
 			}
 
@@ -2807,39 +2816,6 @@ input, select, textarea {
 				font-style:italic;
 				font-size: 17px;
 				margin-left: 18px;
-			}
-
-			.wrapper.style1 .summary .hBI{
-				width: fit-content;
-			}
-
-			.wrapper.style1 .summary .hBI ul{
-				padding-left: 50px;
-			}
-
-			.wrapper.style1 .summary .hBI .badminton{
-				padding-right:95px;
-			}
-			.wrapper.style1 .summary .hBI .tv{
-				padding-right:22px;
-			}
-
-			.wrapper.style1 .summary .hBI .nested{
-				padding-left: 25px;
-			}
-
-			.wrapper.style1 .summary .hBI .nested li{
-				padding-right: 35px;
-			}
-
-			.wrapper.style1 .summary .hBI li{
-				margin: 0;
-        		padding: 0;
-			}
-
-			.wrapper.style1 .summary .other{
-				width: 500px;
-				height: 500px;
 			}
 
 			.wrapper.style1 hr {
@@ -2879,6 +2855,43 @@ input, select, textarea {
 
 			.wrapper.style1 label {
 				color: #ffffff;
+			}
+
+			/* Bootstrap slideshow sliding*/
+			.wrapper.style1 .carousel-item{
+				height: 35rem;
+				font-family:fantasy;
+				position: relative;
+			}
+
+			.wrapper.style1 .action-mov{
+				margin-right: 7.5%;
+			}
+
+			/*Format the bullet points properly.*/
+			.wrapper.style1 .carousel-caption ul{
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.wrapper.style1 .container{
+				position:absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding-bottom: 50px;
+			}
+
+			.wrapper.style1 .overlay-image{
+				position:absolute;
+				bottom:0;
+				left:0;
+				right:0;
+				top:0;
+				background-position: center;
+				background-size: cover;
+				opacity: 0.7;
 			}
 
 			.wrapper.style1 input[type="text"],
@@ -3247,11 +3260,121 @@ input, select, textarea {
 			}
 
 		.wrapper.style4 {
+			background-image: -moz-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+			background-image: -webkit-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+			background-image: -ms-linear-gradient(top, rgba(50,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+			background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 			background-color: #1d242a;
 		}
 
+
+			.wrapper.style4 .contact-stuff{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: center;
+			}
+
+			/*Contact Form*/
+			.wrapper.style4 .contact-form{
+				aspect-ratio: 1/1;
+				width:max-content;
+				height:fit-content;
+				background-color: #fff;
+				top: 50%;
+				left: 50%;
+				margin-left: 10px;
+				margin-bottom: 2.5%;
+				padding: 30px 40px;
+				box-sizing: border-box;
+				border-radius: 8px;
+				text-align: center;
+				box-shadow: 0 0 20px #000000b3;
+				font-family:"Montserrat", sans-serif;
+			}
+
+			.wrapper.style4 .contact-form .textbox{
+				border: 1px solid gray;
+				margin: 18px 0;
+				padding: 12px 18px;
+				border-radius: 12px;
+			}
+
+			.wrapper.style4 .contact-form .textbox label{
+				display: block;
+				text-align: left;
+				color: #333;
+				font-size: 16px;
+			}
+
+			.wrapper.style4 .contact-form .textbox input,.wrapper.style5 .contact-form .textbox textarea {
+				width: 100%;
+				font-size: 16px;
+				margin-top: 6px;
+			}	
+
+			.wrapper.style4 .contact-form .textbox .form-control{
+				color: black;
+			}
+
+			/*Div of send and clear buttons.*/
+			.wrapper.style4 .contact-form .buttons{
+				display: flex;
+				justify-content: center;
+			}
+
+			.wrapper.style4 .contact-form a{
+				display: inline-block;
+				background: green;
+				padding: 14px 0;
+				color: white;
+				cursor: pointer;
+				margin-top: 8px;
+				font-size: large;
+				width: 50%;
+				margin: 0 10px;
+			}
+
+			/*Style for other contact information available.*/
+			.wrapper.style4 .other-contact-info{
+				height: fit-content;	
+				width: fit-content;
+				background-color: #fff;
+				padding: 30px 40px;
+				margin-left: 2%;
+				margin-right:0.5%;
+				border-radius: 8px;
+				box-shadow: 0 0 20px #000000b3;
+			}
+
+			/* Set of discord imgs */
+			.wrapper.style4 .discord-imgs{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			.wrapper.style4 .half{
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.wrapper.style4 .discord-imgs img{
+				height: 100px;
+				margin: 10px;
+			}
+
+			.wrapper.style4 .discord-imgs .dumbaCS{
+				filter: brightness(80%);
+			}
+
+			/*Figure out how to remove the links for the images.*/
+			.wrapper.style4 .discord-imgs a{
+				text-decoration: blink;
+			}
+
 		.wrapper.style5 {
-			background-color: hsl(84, 40%, 49%);
+			background-color: hsl(80, 4%, 29%);
 			color: #4E4852;
 		}
 
@@ -3290,128 +3413,7 @@ input, select, textarea {
 			.wrapper.style5 label {
 				color: #2E3842;
 			}
-			
-			.wrapper.style5 .contact-stuff{
-				display: flex;
-				flex-direction: row;
-				justify-content: space-evenly;
-				align-items: center;
-			}
-
-			/*Contact Form*/
-			.wrapper.style5 .contact-form{
-				aspect-ratio: 1/1;
-				width: 1000px;
-				height: fit-content;
-				background-color: #fff;
-				top: 50%;
-				left: 50%;
-				margin-left: 10px;
-				margin-bottom: 2.5%;
-				padding: 30px 40px;
-				box-sizing: border-box;
-				border-radius: 8px;
-				text-align: center;
-				box-shadow: 0 0 20px #000000b3;
-				font-family:"Montserrat", sans-serif;
-			}
-
-			.wrapper.style5 .contact-form .textbox{
-				border: 1px solid gray;
-				margin: 18px 0;
-				padding: 12px 18px;
-				border-radius: 12px;
-			}
-
-			.wrapper.style5 .contact-form .textbox label{
-				display: block;
-				text-align: left;
-				color: #333;
-				font-size: 14px;
-			}
-
-			.wrapper.style5 .contact-form .textbox input,.wrapper.style5 .contact-form .textbox textarea {
-				width: 100%;
-				font-size: 16px;
-				margin-top: 6px;
-			}	
-
-			/*Div of send and clear buttons.*/
-			.wrapper.style5 .contact-form .buttons{
-				display: flex;
-				justify-content: center;
-			}
-
-			.wrapper.style5 .contact-form a{
-				display: inline-block;
-				background: green;
-				padding: 14px 0;
-				color: white;
-				cursor: pointer;
-				margin-top: 8px;
-				font-size: large;
-				width: 50%;
-				margin: 0 10px;
-			}
-
-			/*Style for other contact information available.*/
-			.wrapper.style5 .other-contact-info{
-				height: fit-content;	
-				width: fit-content;
-				background-color: #fff;
-				padding: 30px 40px;
-				margin-left: 2%;
-				margin-right:0.5%;
-				border-radius: 8px;
-				box-shadow: 0 0 20px #000000b3;
-			}
-
-			/* Set of discord imgs */
-			.wrapper.style5 .discord-imgs{
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-			}
-
-			.wrapper.style5 .discord-imgs img{
-				height: 100px;
-				margin: 10px;
-			}
-
-			.wrapper.style5 .discord-imgs .dumbaCS{
-				filter: brightness(80%);
-			}
-
-			/*Figure out how to remove the links for the images.*/
-			.wrapper.style5 .discord-imgs a{
-				text-decoration: blink;
-			}
-
-			/* Bootstrap slideshow sliding*/
-			.wrapper.style5 .carousel-item{
-				height: 35rem;
-				font-family:fantasy;
-				position: relative;
-			}
-
-			.wrapper.style5 .container{
-				position:absolute;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				padding-bottom: 50px;
-			}
-
-			.wrapper.style5 .overlay-image{
-				position:absolute;
-				bottom:0;
-				left:0;
-				right:0;
-				top:0;
-				background-position: center;
-				background-size: cover;
-				opacity: 0.7;
-			}
+		
 
 			.wrapper.style5 input[type="text"],
 			.wrapper.style5 input[type="password"],

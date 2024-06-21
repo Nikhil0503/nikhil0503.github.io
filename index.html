@@ -8,6 +8,19 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"> 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+		<!--EmailJS-->
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+		<script src="information.js"></script>
+		<script type="text/javascript">
+		(function(){
+			emailjs.init({
+				publicKey: window.env.PUBLIC_KEY,
+			});
+		})();
+		</script>
 	</head>
 	<body class="landing is-preload" style="font-family: 'Times New Roman', Times, serif;">
 
@@ -21,10 +34,12 @@
 										<a href="#menu" class="menuToggle"><span>Menu</span></a>
 										<div id="menu">
 											<ul>
-												<li><a href="index.html">Home</a></li>
-												<li><a href="hobbiesAndInterests.html">Hobbies and Interests</a></li>
-												<li><a href="contactme.html">Contact Me Page</a></li>
-												<li><a target = "" href="Nikhil Munagala- 2024 Latest Resume (9).pdf">Resume</a></li>
+												<li><a href="#banner">Home</a></li>
+												<li><a href="#two">My Pics</a></li>
+												<li><a href="#twoo">About Me</a></li>
+												<li><a href="#three">Projects</a></li>
+												<li><a href="#cta">Contact Me Page</a></li>
+												<li><a target = "_blank" href="Nikhil Munagala- 2024 Latest Resume (9).pdf">Resume</a></li>
 											</ul>
 										</div>
 									</li>
@@ -39,31 +54,35 @@
 								<p>Welcome to my website!!
 								</p>
 							</div>
-							<a href="#one" class="more scrolly">Learn More</a>
+							<a href="#two" class="more scrolly">Learn More</a>
 						</section>
 
-					<section id="one" class="wrapper alt style2">
+					<section id="two" class="wrapper alt style2">
 						<div class = "spotlight">
 							<img src="assets/css/images/photos/miami.png" alt="" />
-							<img src="assets/css/images/photos/MaddameTussauds.jpg" alt="" />
+							<img src="assets/css/images/photos/Statue.png" alt="" />
 							<img src="assets/css/images/photos/Niagara-Canada.jpg" alt="" />
 							<img src="assets/css/images/photos/Bloomberg.png" alt="" />
-							<img src="assets/css/images/photos/Temple.png" alt="" />
+							<img src="assets/css/images/photos/Seaworld.png" alt="" />
 							<img src="assets/css/images/photos/BAPS.png" alt="" />
 						</div>
 					</section>
 
 
 					<!-- Introduction about myself -->
-						<section id="two" class="wrapper style1 special">
+						<section id="twoo" class="wrapper style1 special">
 							<div class="inner">
 								<header class="major">
 									<div class = "image"><img src="assets/css/images/photos/NikhilMunagala.png" alt="Image about me" class = "nikhil-mun"></div>
 									<p class = "introd" style="font-size: 25px;"> I hope you are enjoying my personal website so far, but now it's 
 									finally time to introduce myself.</h2>
-									<p>I am a Computer Science Major at Rutgers who is curious about solving everyday problems using software. I am
-										passionate about Software Engineering + Development and I love building clean user interfaces that ensure a good quality user experience.
-										I am adaptive in working in a team-centered environment through utilizing my strong interpersonal/communication and critical thinking skills.</p>
+									<p>I am a Computer Science Major at Rutgers with a passion for Software Engineering + Development. I love building clean user interfaces that enhance user experience and  
+										benefits society.</p>
+										<p>During the 2 years of work experience in the various positions that I upheld at Rutgers University, 
+											I have significantly improved my critical thinking and interpersonal/communication skills,  
+											becoming more hands-on and adaptive in team-centered environments. In addition, I am constantly up-to-date
+											on the latest technologies and gaining daily hands-on experience.
+										</p>
 										<br>
 										<p>
 											<b>School Coursework</b>: Introduction to Computer Science, Data Structures,
@@ -73,26 +92,52 @@
 										</p>
 										<br>
 										<div class = "summary">
-											<div class = "hBI">
-												<!--Have an image accompanying each hobby/interest.-->
-												<p> What do I like to do in my free time?
-													<ul>
-														<li class = "badminton">Play Badminton</li>
-					 									<li class = "tv">Watch TV Shows such as:
-															<ul class = "nested">
-																<li>Stranger Things</li>
-																<li>Lost in Space</li>
-																<li>And more...!</li>
-															</ul>
-														</li>
-														<li class = "socialize">Socializing with new people</li>
-													</ul>
-												</p>
+											<p style="font-size: 25px;"> What do I like to do in my free time?</p>
+											<!--Bootstrap slideshow--->
+									<div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+										<div class="carousel-inner">
+											<div class="carousel-item active" data-interval = "4000">
+											  <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+											  <div class="overlay-image" style = "background-image: url(assets/css/images/photos/badminton.jpg);"></div>
+											  <div class="container">
+												<div class="carousel-caption text-start">
+												  <h1>Badminton</h1>
+												  <p>Love to play badminton with my friends at least 2-3x a wk.</p>
+												</div>
+											  </div>
 											</div>
-											<div class = "other">
-												<p style = "font-size: 25px;"><strong>If you want to learn more about my hobbies and interests in-depth, 
-													check them out in the Hobbies and Interests page in the menu bar!</strong></p>
+											<div class="carousel-item" data-interval = "4000">
+											  <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+											  <div class="overlay-image" style = "background-image: url(assets/css/images/photos/netflix.jpg);"></div>
+											  <div class="container">
+												<div class="carousel-caption">
+												  <h1>TV Shows and Movies on Netflix</h1>
+												  <ul>
+													  <li class = "action-mov">Favorite Genre: Action/Thriller</li>
+													  <li>Favorite Actor/Actress: Matt Damon</li>
+												  </ul>
+												  </p>
+												</div>
+											  </div>
 											</div>
+											<div class="carousel-item" data-interval = "4000">
+											  <div class="overlay-image" style = "background-image: url(assets/css/images/photos/holi.jpeg);"></div>
+											  <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+											  <div class="container">
+												<div class="carousel-caption text-end">
+												  <h1>Socializing with friends</h1>
+												  <p>Enjoying the Holi Event at Rutgers with my friends.</p>
+												</div>
+											  </div>
+											</div>
+										  </div>
+										  <!---Carousel indicators-->
+										<div class="carousel-indicators d-flex justify-content-center">
+											<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+											<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+											<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>										</div>
+									  </div>
+									  </div>
 										</div>
 									</header>
 							</div>
@@ -100,69 +145,27 @@
 						
 						<!--My tech stack-->
 						<section class="two-spotlight">
-							<div class="content">
-								<p class = "techie" style="text-align:center">Tech Stack</p>
-								<p class = "note" style="text-align:center">Note: I included a Fireship video as part of each icon explaining each technology below, because
-									I love Fireship's videos!!
-								</p>
-								<!--List of icons of different languages-->
-									<div class = "languages">
-										<a target="_blank" href="https://youtube.com/embed/m4-HM_sCvtQ?si=lV4xJW1KIB3iAemT"><i class="devicon-java-plain-wordmark colored"></i></a>
-										<a target="_blank" href="https://www.youtube.com/embed/x7X9w_GIm1s?si=BW7SyRxlfYm-CSU5">
-											<i class="devicon-python-plain-wordmark colored"></i>
-										  </a>									  
-										<a target="_blank" href="https://www.youtube.com/embed/KMxo3T_MTvY?si=WWx-kIV7ZzB1"><i class="devicon-vscode-plain-wordmark colored"></i></a>
-										<a target="_blank" href="https://www.youtube.com/embed/U3aXWizDbQ4?si=YfPEd8oP6qED"><i class="devicon-c-plain colored"></i></a>
-										<a target="_blank" href="https://www.youtube.com/embed/rrB13utjYV4?si=0HGwOf0CkeC7aO-M">
-											<i class="devicon-linux-plain"></i>
-										  </a>
-										<a target="_blank" href="https://www.youtube.com/embed/zQnBQ4tB3ZA?si=lvqzFYq4isVArIyw"><i class="devicon-typescript-original"></i></a>
-								   </div>
-								<br>
-							</div>
-						</section>
-						
-					<!-- Work Experience-->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<p style="font-size: 35px; color: rgba(255, 255, 255, 0.946)">Work Experience</p>
-							</header>
-							<div class = "content">
-								<p style="font-size: 25px; color: rgba(255, 255, 255, 0.946);">Undergraduate Teaching Assistant</p>
-								<h6 style = "text-transform: capitalize; ">Rutgers University &nbsp; &nbsp; &nbsp; Sep 2023 - May 2024</h6>
-								<br>
-								<p style = "font-size: large; font-style: italic; color: rgba(255, 255, 255, 0.946);">My responsibilities included:
-									<ul>
-										<li>Organized recitations in a group-centered manner for
-											 students to solve problems sets in <b>Java</b> on 
-											 fundamentals of programming and advanced programming
-											  concepts that include recursion, object-oriented 
-											  programming, and sorting algorithms.</li>
-										<li>Provided comprehensive feedback on quizzes used to enhance 
-											student's areas of improvements of concepts in the course. 
-										</li>									
-									</ul>
-									Overall, working as a teaching assistant this past year has 
-									significantly improved my communication and analytical skills. 
-									This experience has also made me more committed in promoting
-									active learning for future classes.
-								</p>
-								<br>
-								<p style="font-size: 25px; color: rgba(255, 255, 255, 0.946);">Software Engineering Intern</p>
-								<h6 style = "text-transform: capitalize;">Rutgers University &nbsp; &nbsp; &nbsp; June 2022 - Aug 2022</h6>
-								<br>
-								<p style = "font-size: large; font-style: italic; color: rgba(255, 255, 255, 0.946);">My responsibilities included:
-									<ul>
-										<li>Developed <b>Java</b> assignments in a team-based setting applying Data Structures into real-world situations for students taking the Data Structures course at Rutgers every semester.</li>
-										<li>Improved Object-Oriented Programming(OOP) skills by successfully implement the class structures and solution files for the fellow JavaDoc-documented assignments.</li>
-										<li>Troubleshooted the codebase for the assignments to ensure test correctness and effective coordination when working in teams.</li>
-									</ul>
-									After this experience, I became more confident and skilled in backend software development. 
-									I enjoyed using Version Control to manage code changes for features in the assignments,
-									and improved my problem-solving skills as a whole.
-								</p>
-							</div>
+							<div class = "techsect">
+								<div class="content">
+									<p class = "techie" style="text-align:center">Tech Stack</p>
+									<p class = "note" style="text-align:center">Note: I included a Fireship video as part of each icon explaining each technology below, because
+										I love Fireship's videos!!
+									</p>
+									<!--List of icons of different languages-->
+										<div class = "languages">
+											<a target="_blank" href="https://youtube.com/embed/m4-HM_sCvtQ?si=lV4xJW1KIB3iAemT"><i class="devicon-java-plain-wordmark colored"></i></a>
+											<a target="_blank" href="https://www.youtube.com/embed/x7X9w_GIm1s?si=BW7SyRxlfYm-CSU5">
+												<i class="devicon-python-plain-wordmark colored"></i>
+											</a>									  
+											<a target="_blank" href="https://www.youtube.com/embed/KMxo3T_MTvY?si=WWx-kIV7ZzB1"><i class="devicon-vscode-plain-wordmark colored"></i></a>
+											<a target="_blank" href="https://www.youtube.com/embed/U3aXWizDbQ4?si=YfPEd8oP6qED"><i class="devicon-c-plain colored"></i></a>
+											<a target="_blank" href="https://www.youtube.com/embed/rrB13utjYV4?si=0HGwOf0CkeC7aO-M">
+												<i class="devicon-linux-plain"></i>
+											</a>
+											<a target="_blank" href="https://www.youtube.com/embed/zQnBQ4tB3ZA?si=lvqzFYq4isVArIyw"><i class="devicon-typescript-original"></i></a>
+									</div>
+									<br>
+								</div>
 						</div>
 					</section>
 					
@@ -170,7 +173,7 @@
 				<section id="three" class="wrapper style3 special">
 					<div class="inner">
 						<header class="major">
-							<h2>My Projects</h2>
+							<p style="font-size: 45px;">My Projects</p>
 							<ul>Slideshow of projects I have been working on the last 1-2 years.
 								<br>
 								<br>
@@ -245,11 +248,77 @@
 					</div>
 				</section>
 
+				<section id="cta" class="wrapper style4">
+					<p style = "font-size: 45px; text-align:center">Contact Me</p>
+					<div class="inner" style = "color: black;">
+						<div class = "contact-stuff">
+							<!---Contact form-->
+							<div class = "contact-form" style = "font-family: 'Times New Roman', Times, serif;">
+								<div class = "textbox">
+									<label for="">Name</label>
+									<input list="previous1-options" type="text" class="form-control name">
+									<datalist id="previous1-options"></datalist>
+								</div>
+								<div class = "textbox">
+									<label for="">Email Address</label>
+									<input list="previous2-options" type="text" class="form-control email-address">
+									<datalist id="previous2-options"></datalist>
+								</div>
+								<div class = "textbox">
+									<label for="">Subject</label>
+									<input list="previous3-options" type="text" class="form-control subject">
+									<datalist id="previous3-options"></datalist>
+								</div>
+								<div class = "textbox">
+									<label for="">Message</label>
+									<textarea class="form-control bg-gray"></textarea>
+								</div>
+								<div class = "buttons">
+									<a class = "btn btn-primary submit">Submit</a>
+								</div>
+							</div>
+							<!---Other contact information-->
+							<div class = "other-contact-info">
+									<div>Feel free to contact me using my contacts below!</div> 
+										<ul>
+											<li>
+												<span>
+													Discord Username: nikhil6765
+												</span>
+											</li>
+											<li>
+												<span class = "bereal">
+													BeReal Username: nikhilyo
+												</span>
+											</li>
+											<li>
+												<span>
+													Phone Number: 732-754-9338
+												</span>
+											</li>
+										</ul>
+									Discord communities I am active in, so that you can meet me there as well!
+									<!--How to represent the discord communities!-->
+									<i>Click on the images below to receive the invite links for the discords.</i>
+										<br>
+										<br>
+										<!---Section of hyperlinks embedded images-->
+										<div class = "discord-imgs">
+											<div class = "half">
+												<a href="https://discord.gg/rutgersmath" target = "_blank"><img src="https://cdn.discordapp.com/icons/682667655043350528/a_3259629409858a40755ef9a7b302c72f.webp?size=240" alt="RUMath discord"></a>
+												<a href="https://discord.gg/XJ7jGQ7R" target = "_blank" class = "dumbaCS"><img src="https://cdn.discordapp.com/icons/883094886587449444/312392d07cd3562c35d564812d8ea0e3.webp?size=240" alt="dumbaCS discord"></a>
+											</div>
+										</div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</section>
+
 					<!-- Footer -->
 						<footer id="footer">
-							
 							<ul class="icons">
-								<li><a target="_blank" href="https://github.com/Nikhil0503" class="icon brands fa-github"></a></li>
+								<li><a target="_blank" href="https://github.com/Nikhil68596" class="icon brands fa-github"></a></li>
 								<li><a target="_blank" href="https://www.linkedin.com/in/nikhilsai-munagala-0251611b9/" class="icon brands fa-linkedin"></a></li>
 							</ul>
 						</footer>
@@ -264,6 +333,9 @@
 				<script src="assets/js/breakpoints.min.js"></script>
 				<script src="assets/js/util.js"></script>
 				<script src="assets/js/main.js"></script>
+				<!--Bootstrap script js for the Hobbies and Interests-->
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+				<script src = "sendEmail.js"></script>
 			</body>
 </html>
