@@ -1,3 +1,4 @@
+require('dotenv').config()
 // Access the submit button
 var submitBtn = document.querySelector(".btn.btn-primary.submit");
 
