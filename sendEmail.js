@@ -1,34 +1,37 @@
 // Access the submit button
 var submitBtn = document.querySelector(".btn.btn-primary.submit");
 
+/*
+yo = 4
+console.log(yo);
+*/
+
 //Get the text fields
 var nameInput = document.querySelector(".name");
-var dataList1 = document.querySelector(".previous1-options");
-var subjectInput = document.querySelector(".subject");
-var dataList2 = document.querySelector(".previous2-options");
+var dataList1 = document.getElementById('previous1-options');
 var emailAddressInput = document.querySelector(".email-address");
-var dataList3 = document.querySelector(".previous3-options");
+var dataList2 = document.getElementById('previous2-options');
+var subjectInput = document.querySelector(".subject");
+var dataList3 = document.getElementById('previous3-options');
 var emailMessageInput = document.querySelector("textarea");
-
-//Maintain a list of 
 
 //Maintain a Hashmap for easy access for Data Lists based on the name of the datalist.
 let nameDataList = {};
-nameDataList[nameInput] = dataList1;
-nameDataList[subjectInput] = dataList2;
-nameDataList[emailAddressInput] = dataList3;
+nameDataList[".name"] = dataList1;
+nameDataList[".email-address"] = dataList2;
+nameDataList[".subject"] = dataList3;
 
 var invalid = false; //No invalid message being generated in the beginning. 
 
 var ivmsg = null; //This is the global variable used for the invalid msg.
 
-function loadOptions(tfInputField) {
-    const storedOptions = JSON.parse(localStorage.getItem(tfInputField.className)) || [];
-    nameDataList[tfInputField].innerHTML = '';
+function loadOptions(tfInputFieldName) {
+    const storedOptions = JSON.parse(localStorage.getItem(tfInputFieldName)) || [];
+    nameDataList[tfInputFieldName].innerHTML = "";
     storedOptions.forEach(option => {
         const optionElement = document.createElement('option');
         optionElement.value = option;
-        nameDataList[tfInputField].appendChild(optionElement);
+        nameDataList[tfInputFieldName].appendChild(optionElement);
     });
 }
 
@@ -39,6 +42,15 @@ function saveOption(value, dataListName) {
         localStorage.setItem(dataListName, JSON.stringify(storedOptions));
     }
 }
+
+//Load all of the options when you click on the input field.
+Object.keys(nameDataList).forEach(key => {
+    const tfInputField = document.querySelector(key); 
+        tfInputField.addEventListener('click', function(e) {
+            e.preventDefault();   
+            loadOptions(key);
+        });
+});   
 
 // Set the event listener for the submit button
 submitBtn.addEventListener('click', function(e){
@@ -64,7 +76,10 @@ submitBtn.addEventListener('click', function(e){
             count = 0;
             invalid = false;
         }
-        
+        //Save the options for name, email address, and subject
+        saveOption(name, ".name");
+        saveOption(subject, ".subject");
+        saveOption(emailAddress, ".email-address");
         // Send the email using an email service (e.g., Email.js)
         sendingEmail(name, emailAddress, subject, emailMessage);
         nameInput.value = '';
