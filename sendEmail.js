@@ -1,11 +1,6 @@
 // Access the submit button
 var submitBtn = document.querySelector(".btn.btn-primary.submit");
 
-/*
-yo = 4
-console.log(yo);
-*/
-
 //Get the text fields
 var nameInput = document.querySelector(".name");
 var dataList1 = document.getElementById('previous1-options');
@@ -111,7 +106,7 @@ function generateIVMessage() {
 //Function that sends an email using emailJS
 function sendingEmail(name, emailAddress, subject, msg){
     var params = {name, emailAddress, subject, msg};
-    emailjs.send(window.env.SERVICE_ID, window.env.TEMPLATE_ID, params).then(
+    emailjs.send(process.env.SERVICE_ID, process.env.TEMPLATE_ID, params).then(
         res => {
             console.log(res);
             alert("Your message has been successfully sent!");
